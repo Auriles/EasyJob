@@ -1,0 +1,24 @@
+{
+  "name": "easyjob",
+  "description": "EasyJob FrontEnd app",
+  "main": "index.js",
+  "authors": [
+    "Charles BARDIN <bardincharles@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Auriles/EasyJob",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
