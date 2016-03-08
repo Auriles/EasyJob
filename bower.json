@@ -1,7 +1,7 @@
 {
   "name": "easyjob",
-  "description": "EasyJob FrontEnd app",
-  "main": "index.js",
+  "description": "EasyJob's FE",
+  "main": "index.html",
   "authors": [
     "Charles BARDIN <bardincharles@gmail.com>"
   ],
@@ -20,5 +20,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "angular": "~1.5.0",
+    "bootstrap": "3.3.4"
+  }
 }
