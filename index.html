@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>EasyJob</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>EasyJob</title>
 
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <!-- endbower -->
-</head>
-<body ng-app="EasyJob">
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <!-- endbower -->
 
-    <!-- bower:js -->
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <!-- endbower -->
+        <!-- custom stylesheet -->
+        <link rel="stylesheet" href="styles/main.css" />
 
-    <!-- app -->
-    <script src="scripts/app.js"></script>
+    </head>
+    <body ng-app="EasyJob">
+        <div id="app-container" class="container" ui-view></div>
 
-    <!-- services -->
-    <script src="scripts/services/connectivity.js"></script>
+        <!-- bower:js -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <!-- endbower -->
 
-    <!-- controllers -->
-    <script src="scripts/controllers/login.js"></script>
+        <!-- app -->
+        <script src="scripts/app.js"></script>
 
-    <!-- filters -->
-    <script src="scripts/filters/test.js"></script>
-</body>
+        <!-- services -->
+        <script src="scripts/services/connectivity.js"></script>
+
+        <!-- controllers -->
+        <script src="scripts/controllers/login.js"></script>
+
+        <!-- filters -->
+        <script src="scripts/filters/test.js"></script>
+    </body>
 </html>
