@@ -1,6 +1,7 @@
 "use strict";
 
 var app = angular.module('EasyJob', ['ui.router'])
+    // States config
     .config(function($stateProvider, $urlRouterProvider){
         $urlRouterProvider.otherwise("/login");
         $stateProvider
@@ -19,7 +20,19 @@ var app = angular.module('EasyJob', ['ui.router'])
                 templateUrl: "views/particularprofile.html",
                 controller: "particularProfileCtrl"
             })
+            .state('particular.applications', {
+                url: '/',
+                templateUrl: 'views/particularapplications.html',
+                controller: 'particularApplicationsCtrl'
+            })
+            .state('particular.search', {
+                url: '/search',
+                templateUrl: 'views/particularsearch.html',
+                controller: 'particularSearchCtrl'
+            })
     })
+
+    // State change scripts
     .run(['$rootScope', '$state', 'Authentification', function($rootScope, $state, Authentification){
         $rootScope.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams) {
             if (toState.name !== 'login') {

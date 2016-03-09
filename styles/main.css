@@ -23,3 +23,21 @@ body,
         margin-left: auto;
         margin-right: auto;
     }
+
+/* PARTICULAR MAIN */
+#particularView {
+    margin-top: 51px;
+}
+
+/* PARTICULAR PROFILE */
+.profilePic {
+    max-height: 180px;
+}
+
+.profileWrapper {
+    padding-top: 10px;
+}
+
+.userCivilWrapper {
+    display: inline-block;
+}
