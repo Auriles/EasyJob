@@ -1,6 +1,8 @@
-app.controller('loginCtrl', ['$scope', '$log', function($scope, $log){
+"use strict";
+
+app.controller('loginCtrl', ['$scope', '$log', 'Authentification', '$state', function($scope, $log, Authentification, $state){
     var setSide = function(side) {
-        if(!$scope.side || $scope.side === 'business' || $scope.side === 'private_person') {
+        if(!$scope.side || side === 'business' || side === 'private_person') {
             $scope.side = side;
         }
     };
@@ -8,7 +10,11 @@ app.controller('loginCtrl', ['$scope', '$log', function($scope, $log){
     var userLogin = function(){
         if($scope.side && $scope.username && $scope.password) {
             // TODO: implement loggin
-            $log.debug('loggin request sent');
+            if($scope.side === 'private_person') {
+                $log.debug('Login process started.');
+                Authentification.loggingIn($scope.username);
+                $state.go('particular');
+            }
         }
     };
 
