@@ -19,7 +19,7 @@ app.filter('dateFormat', ['$filter', function($filter) {
             'nov.',
             'déc.'
         ]
-        var modifiedInput = $filter('date')(input, 'dd ')
+        var modifiedInput = $filter('date')(input, 'dd ');
         modifiedInput += months[Number($filter('date')(input, 'M')) - 1];
         modifiedInput += $filter('date')(input, ' yyyy');
         return modifiedInput

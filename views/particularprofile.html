@@ -1,6 +1,6 @@
 <div class="container profileWrapper">
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="row">
@@ -8,8 +8,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4 text-center">
-                            <img class="img-circle avatar avatar-original profilePic" style="-webkit-user-select:none;
-              display:block; margin:auto;" ng-src="images/user_pictures/{{user.imgSrc}}" alt="Photo de profile">
+                            <img class="img-circle avatar avatar-original profilePic" style="-webkit-user-select:none; display:block; margin:auto;" ng-src="images/user_pictures/{{user.imgSrc}}" alt="Loading..." ng-hide="!user.imgSrc">
                         </div>
                         <div class="col-md-8">
                             <div class="row">
@@ -26,21 +25,29 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="activity-mini">
-                                        <i class="glyphicon glyphicon-comment text-muted"></i> 500
+                                        <i class="glyphicon glyphicon-thumbs-up text-muted"></i> 500
                                     </div>
                                     <div class="activity-mini">
-                                        <i class="glyphicon glyphicon-thumbs-up text-muted"></i> 1500
+                                        <i class="glyphicon glyphicon-star text-muted"></i> {{user.score}}%
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12 lead"><hr>Curriculum Vitae<hr></div>
+                        <div class="col-md-12">
+                            <button class="btn btn-default pull-right" ng-click="toggleCV()">{{showCV ? 'Cacher' : 'Montrer'}} le CV <i ng-class="{'glyphicon': true, 'glyphicon-menu-down': showCV, 'glyphicon-menu-right': !showCV}"></i></button>
+                        </div>
+                    </div>
+                    <div class="row" ng-show="showCV">
+                        <div class="col-md-12 lead">
+                            <hr>Curriculum Vitae<hr>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <hr><button class="btn btn-default pull-right"><i class="glyphicon glyphicon-pencil"></i> Edit</button>
+<!-- TODO: change ng-click-->
+                            <hr><button class="btn btn-default pull-right" ng-click="goToProfile(2)">Autre profile</button>
                         </div>
                     </div>
                 </div>

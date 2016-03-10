@@ -1,20 +1,35 @@
 "use strict";
 
-app.controller('particularProfileCtrl', ['$scope', '$log', function($scope, $log){
+app.controller('particularProfileCtrl', ['$scope', '$log', 'Authentification', '$stateParams', 'Users', '$state', '$rootScope',
+    function($scope, $log, Authentification, $stateParams, Users, $state, $rootScope){
+
+    var toggleCV = function(){
+        $scope.showCV = !$scope.showCV;
+    };
 
     var initCtrlWithNoBE = function(){
-        var user = {
-            id: 1,
-            imgSrc: 'test.jpg',
-            lastName: 'McDeath',
-            firstName: 'Hjördis',
-            gender: 'women',
-            birthDate: 54201789,
-            mail: 'please@givemea.job',
-            signInDate: 954542017897
+        if($stateParams.userID !== Authentification.getUserID()) {
+            Users.getUserByID($stateParams.userID)
+                .then(function(data){
+                    var user;
+                    if(data){
+                        user = data;
+                    }
+                    else {
+                        user = Authentification.getUser();
+                    }
+                    console.log(user);
+                    $scope.user = user;
+                });
+        }
+        $scope.showCV = false;
+        $scope.toggleCV = toggleCV;
+        $log.debug('particularProfileCtrl is initialized with fake data.');
+
+        // TODO: remove
+        $scope.goToProfile = function(userID){
+            $state.go($state.current, {userID: userID}, {reload: true});
         };
-        $scope.user = user;
-        $log.debug('particularProfileCtrl is initialized with fake data.')
     };
     var initCtrl = function(){
 
@@ -22,6 +37,7 @@ app.controller('particularProfileCtrl', ['$scope', '$log', function($scope, $log
     };
 
     // TODO: initiate controller with BE's data
+        $rootScope.$on()
     initCtrlWithNoBE();
 //    initCtrl();
 }]);
