@@ -7,7 +7,8 @@ app.controller('loginCtrl', ['$scope', '$log', 'Authentification', '$state', 'Us
         }
     };
 
-    var userLogin = function(){
+    var userLogin = function(side){
+        setSide(side);
         if($scope.side && $scope.username && $scope.password) {
             // TODO: implement loggin
             if($scope.side === 'private_person') {

@@ -1,3 +1,54 @@
+<div id="milieu" class="conteiner-fluid">
+    <div  class="row-fluid">
+        <div id="bloc" class="col-md-offset-2 col-md-3" >
+            <div id="entreprise">
+                <img class="icone_entreprise" src="images/icone_entreprise.png" alt="icone_entreprise">
+                <p class="text">
+                    Entreprise
+                </p>
+                <form>
+                    <div>
+                        <input type="email" ng-model="username" class="email" placeholder="Pseudo">
+                    </div>
+                    <div >
+                        <input type="password" ng-model="password" class="mdp" placeholder="Mot de passe">
+                    </div>
+                    <button class="btn btn-default" ng-click="userLogin('business')">Connexion</button>
+                </form>
+            </div>
+        </div>
+        <div id="logo" class="col-md-2">
+        </div>
+        <div id="bloc" class="col-md-3">
+            <div id="candidat">
+                <img class="icone_cv" src="images/icone_cv.png" alt="icone_cv">
+                <p class="text">
+                    Candidat
+                </p>
+                <form>
+                    <div>
+                        <input type="email" ng-model="username"  class="email" placeholder="Pseudo">
+                    </div>
+                    <div >
+                        <input type="password" ng-model="password"  class="mdp" placeholder="Mot de passe">
+                    </div>
+                    <button class="btn btn-default" ng-click="userLogin('private_person')">Connexion</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<nav id="footer">
+    <ul>
+        <li>
+            <a href="">Contact</a>
+        </li>
+        <li>
+            <a href="">A propos</a>
+        </li>
+    </ul>
+</nav>
+<!--
 <div class="row vertical-align" id="login-container">
     <div class="col-sm-6 container" ng-show="!side">
         <button class="btn btn-lg btn-default center" ng-click="setSide('business')">Entreprise</button>
@@ -21,3 +72,4 @@
     </div>
 </div>
 
+-->
