@@ -13,7 +13,7 @@
                     <div >
                         <input type="password" ng-model="password" class="mdp" placeholder="Mot de passe" required>
                     </div>
-                    <button class="btn btn-default" ng-click="userLogin('business')" ng-disabled="businessForm.$invalid || businessForm.$pristine">Connexion</button>
+                    <button class="btn btn-default" ng-click="userLogin('business')" ng-disabled="businessForm.$invalid">Connexion</button>
                 </form>
             </div>
         </div>
@@ -38,16 +38,6 @@
         </div>
     </div>
 </div>
-<nav id="footer">
-    <ul>
-        <li>
-            <a href="">Contact</a>
-        </li>
-        <li>
-            <a href="">A propos</a>
-        </li>
-    </ul>
-</nav>
 <!--
 <div class="row vertical-align" id="login-container">
     <div class="col-sm-6 container" ng-show="!side">
