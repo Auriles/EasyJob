@@ -6,14 +6,14 @@
                 <p class="text">
                     Entreprise
                 </p>
-                <form>
+                <form name="businessForm">
                     <div>
-                        <input type="email" ng-model="username" class="email" placeholder="Pseudo">
+                        <input type="email" ng-model="username" class="email" placeholder="Pseudo" required>
                     </div>
                     <div >
-                        <input type="password" ng-model="password" class="mdp" placeholder="Mot de passe">
+                        <input type="password" ng-model="password" class="mdp" placeholder="Mot de passe" required>
                     </div>
-                    <button class="btn btn-default" ng-click="userLogin('business')">Connexion</button>
+                    <button class="btn btn-default" ng-click="userLogin('business')" ng-disabled="businessForm.$invalid || businessForm.$pristine">Connexion</button>
                 </form>
             </div>
         </div>
@@ -25,14 +25,14 @@
                 <p class="text">
                     Candidat
                 </p>
-                <form>
+                <form name="particularForm">
                     <div>
-                        <input type="email" ng-model="username"  class="email" placeholder="Pseudo">
+                        <input type="email" ng-model="username"  class="email" placeholder="Pseudo" required>
                     </div>
                     <div >
-                        <input type="password" ng-model="password"  class="mdp" placeholder="Mot de passe">
+                        <input type="password" ng-model="password"  class="mdp" placeholder="Mot de passe" required>
                     </div>
-                    <button class="btn btn-default" ng-click="userLogin('private_person')">Connexion</button>
+                    <button class="btn btn-default" ng-click="userLogin('private_person')" ng-disabled="particularForm.$invalid">Connexion</button>
                 </form>
             </div>
         </div>
