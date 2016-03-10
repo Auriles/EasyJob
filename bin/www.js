@@ -8,7 +8,7 @@ var app = require('../app');
 var debug = require('debug')('morpion:server');
 var http = require('http');
 var HOST = '127.0.0.1';
-var PORT = 3000;
+var PORT = 80;
 
 
 
@@ -17,7 +17,7 @@ var PORT = 3000;
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '80');
 app.set('port', port);
 
 /**
