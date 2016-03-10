@@ -1,7 +1,17 @@
 /* MAIN STYLE */
-body,
-#app-container {
-    height: 100vh;
+/*body,*/
+/*#app-container {*/
+    /*height: 100vh;*/
+/*}*/
+
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+#app-container
+{
+    padding-bottom: 60px;
 }
 
 .vertical-align {
@@ -23,6 +33,9 @@ body,
         margin-left: auto;
         margin-right: auto;
     }
+
+
+
 
 @font-face {
     font-family: 'trackregular';
@@ -140,7 +153,8 @@ body,
     bottom: 0;
     height: 60px;
     min-width: 100%;
-    background: black;
+    background: #222;
+    border: solid 1px #080808;
 }
 
 #footer li {
