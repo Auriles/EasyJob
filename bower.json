@@ -1,0 +1,28 @@
+{
+  "name": "easyjob",
+  "description": "EasyJob's FE",
+  "main": "index.html",
+  "authors": [
+    "Charles BARDIN <bardincharles@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Auriles/EasyJob",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.0",
+    "bootstrap": "3.3.4"
+  }
+}
