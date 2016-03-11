@@ -11,7 +11,7 @@ var app = angular.module('EasyJob', ['ui.router'])
                 controller: "loginCtrl"
             })
             .state('particular', {
-                url: "",
+                url: "/particular",
                 templateUrl: "views/particular.html",
                 controller: "particularCtrl"
             })

@@ -1,8 +1,9 @@
+"use strict";
+
 app.controller('indexCtrl', ['$scope', '$rootScope', function($scope, $rootScope){
-    $scope.currentView = 'login';
     $rootScope.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams) {
         $scope.currentView = toState.name;
-    })
+    });
 }]);
 
 /**
