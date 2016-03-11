@@ -9,6 +9,14 @@ body {
     min-height: 100vh;
 }
 
+.height-100 {
+    height: 100%;
+}
+
+.login-view-app-container{
+    height: 100vh;
+}
+
 #app-container
 {
     padding-bottom: 60px;
@@ -50,10 +58,14 @@ body {
 
 }
 
-#milieu #bloc{
-    height: 500px;
-    margin-top: 48vh;
-    transform: translateY(-50%);
+/*#milieu #bloc{*/
+    /*height: 500px;*/
+    /*margin-top: 48vh;*/
+    /*transform: translateY(-50%);*/
+/*}*/
+
+#milieu {
+    height: 100%
 }
 
 #milieu #logo {
@@ -65,33 +77,17 @@ body {
     font-family: "trackregular"
 }
 
-#milieu #entreprise {
-    padding-top: 70px;
-    height: 500px;
-    width: 350px;
-    background-color: #E3EEEF;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 7px;
-    box-shadow: 5px 5px 5px 1px #242424;
-    -webkit-box-shadow: 5px 5px 5px 1px #242424;
-    -moz-box-shadow: 5px 5px 5px 1px #242424;
-    -o-box-shadow: 5px 5px 5px 1px #242424;
-}
-
 #milieu .icone_entreprise {
     display: block;
     width: 100px;
     height: 100px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
-
 }
 
-#milieu #candidat {
-    padding-top: 70px;
-    height: 500px;
+#milieu .formContainer {
+    padding: 20px;
+    height: auto;
     width: 350px;
     background-color: #E3EEEF;
     margin-left: auto;
@@ -109,7 +105,6 @@ body {
     height: 100px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
 
 }
 

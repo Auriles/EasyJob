@@ -39,7 +39,7 @@ app.factory('Users', ['$q', '$timeout', function($q, $timeout){
             }
 
             deferred.resolve(user);
-        },500);
+        }, 500);
 
         return deferred.promise;
     };
