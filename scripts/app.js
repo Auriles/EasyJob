@@ -10,6 +10,11 @@ var app = angular.module('EasyJob', ['ui.router'])
                 templateUrl: "views/login.html",
                 controller: "loginCtrl"
             })
+            .state('register', {
+                url: "/register",
+                templateUrl: "views/register.html",
+                controller: "registerCtrl"
+            })
             .state('particular', {
                 url: "/particular",
                 templateUrl: "views/particular.html",
@@ -38,7 +43,7 @@ var app = angular.module('EasyJob', ['ui.router'])
         $rootScope.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams) {
             console.log(toState.name + ' : ' + toParams.userID);
 
-            if (!Authentification.isLoggedIn() && toState.name !== 'login') {
+            if (!Authentification.isLoggedIn() && toState.name !== 'login' && toState.name !== 'register') {
                     e.preventDefault();
                     $state.go('login');
             } else if(toState.name === 'particular'){
