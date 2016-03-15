@@ -177,3 +177,15 @@ body {
 .userCivilWrapper {
     display: inline-block;
 }
+
+/* PARTICULAR SEARCH */
+
+.form-group {
+    padding-top: 50px;
+    margin-bottom: 0px;
+}
+/* PARTICULAR APPLICATIONS */
+
+.container {
+    padding-top: 50px;
+}

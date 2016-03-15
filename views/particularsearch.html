@@ -1,1 +1,46 @@
-Search
+<head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <title>Recherche de candidature</title>
+</head>
+
+<!-- Search  -->
+<body>
+    <div class="col-sm-8">
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" placeholder="recherche par mots-clés" name="s" class="form-control left-rounded">
+                <div class="input-group-btn">
+                    <button type="submit" class="btn btn-inverse">Chercher</button>
+                </div>
+
+            </div>
+        </div>
+        <div>
+             <!-- SAME BUTON AS "SHOW CV" -->
+            <button type="button" class="btn" ng-click="toggleSearch()">{{advancedSearch ? 'Cacher' : 'Montrer' }}Recherche Avancée <i ng-class="{'glyphicon': true, 'glyphicon-menu-down': advancedSearch, 'glyphicon-menu-right': !advancedSearch}"></i></button>
+        </div>
+        <div class="row" ng-show="advancedSearch"></div>
+        <div class="asContent">
+            <!-- ADD SCRIPT TO LOOK INTO THE DATABASE -->
+            <pre>
+            <input type="text" placeholder="Nom" class="form-control left-rounded">
+            <input type="text" placeholder="Poste" class="form-control left-rounded">
+            <input type="text" placeholder="Date de publication" class="form-control left-rounded">
+
+               
+                <div class="input-group-btn">
+                    <button type="submit" class="btn btn-default pull-right">Chercher</button>
+                </div>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+    <!-- Results -->
+
+
+
+</body>
