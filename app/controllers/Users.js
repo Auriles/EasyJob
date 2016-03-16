@@ -41,7 +41,7 @@ var Users = {
             if (err) throw err;
 
             // change the users location
-            user.name = 'Josay';
+           // user.name = 'Josay';
 
             // save the user
             user.save(function (err) {
