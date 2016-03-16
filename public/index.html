@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>EasyJob</title>
+
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <!-- endbower -->
+
+        <!-- custom stylesheet -->
+        <link rel="stylesheet" href="styles/main.css" />
+
+    </head>
+    <body ng-app="EasyJob" ng-controller="indexCtrl">
+        <div id="app-container" ng-class="{container: currentView !== 'login', 'login-view-app-container': currentView === 'login'}" ui-view ng-cloak></div>
+
+        <nav id="footer">
+            <ul>
+                <li><a href="">Contact</a></li>
+                <li><a href="">A propos</a></li>
+            </ul>
+        </nav>
+
+        <!-- bower:js -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <!-- endbower -->
+
+        <!-- app -->
+        <script src="scripts/app.js"></script>
+
+        <!-- services -->
+        <script src="scripts/services/authentification.js"></script>
+        <script src="scripts/services/users.js"></script>
+        <script src="scripts/services/applications.js"></script>
+
+        <!-- controllers -->
+        <script src="scripts/controllers/index.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/particular.js"></script>
+        <script src="scripts/controllers/particularprofile.js"></script>
+        <script src="scripts/controllers/particularapplications.js"></script>
+        <script src="scripts/controllers/particularsearch.js"></script>
+        <script src="scripts/controllers/register.js"></script>
+
+        <!-- filters -->
+        <script src="scripts/filters/dateFormat.js"></script>
+        <script src="scripts/filters/timeRemaining.js"></script>
+
+
+        <!-- directives -->
+        <script src="scripts/directives/userProfile.js"></script>
+    </body>
+</html>
