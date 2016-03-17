@@ -9,13 +9,17 @@ app.factory('Offers', ['$q', '$timeout', function($q, $timeout){
     var getOffersByUser = function(){
         // TODO: implement function
     };
+    var searchOffer = function(searchCriteria){
+        // TODO: implement function
+    };
 
     return {
         getOffers: function(){
             return offerCollection;
         },
         getOffersByBusinessId: getOffersByBusinessId,
-        getOffersByUser: getOffersByUser
+        getOffersByUser: getOffersByUser,
+        searchOffer: searchOffer
     }
 }]);
 

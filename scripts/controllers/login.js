@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller('loginCtrl', ['$scope', '$log', 'Authentification', '$state', function($scope, $log, Authentification, $state, Users){
+app.controller('loginCtrl', ['$scope', '$log', 'Authentification', '$state', function($scope, $log, Authentification, $state){
     var userLogin = function(){
         if($scope.credentials && $scope.credentials.username && $scope.credentials.password) {
             // TODO: implement loggin

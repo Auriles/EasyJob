@@ -20,6 +20,11 @@ var app = angular.module('EasyJob', ['ui.router'])
                 templateUrl: "views/register.html",
                 controller: "registerCtrl"
             })
+            .state('offer', {
+                url: "/offer",
+                templateUrl: "views/offer.html",
+                controller: "offerCtrl"
+            })
             .state('particular', {
                 url: "/particular",
                 templateUrl: "views/particular.html",
