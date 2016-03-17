@@ -7,6 +7,7 @@
 body {
     position: relative;
     min-height: 100vh;
+    background-image: url(../images/fond.jpg)
 }
 
 .height-100 {
@@ -148,8 +149,6 @@ body {
     bottom: 0;
     height: 60px;
     min-width: 100%;
-    background: #222;
-    border: solid 1px #080808;
 }
 
 #footer li {
@@ -189,3 +188,8 @@ body {
 .container {
     padding-top: 50px;
 }
+
+.table {
+    color:white;
+}
+
