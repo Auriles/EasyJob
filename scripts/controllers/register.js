@@ -1,7 +1,6 @@
 "use strict";
 
 app.controller('registerCtrl', ['$scope', 'Authentification', '$state', function($scope, Authentification, $state){
-    // TODO: implement function
     $scope.register = function(){
         var user = $scope.user;
         Authentification.registerUser(user)
