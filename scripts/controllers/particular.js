@@ -4,8 +4,8 @@ app.controller('particularCtrl', ['$scope', '$log', '$state', 'Authentification'
     var setView = function(view){
         $scope.selectedView = view;
     };
-    var goToOwnProfile = function(){
-        $state.go('particular.profile', {userID: ''}, {reload: true});
+    var goToProfile = function(){
+        $state.go('particular.profile');
     };
     var logout = function(){
         Authentification.forceLogOut();
@@ -13,7 +13,7 @@ app.controller('particularCtrl', ['$scope', '$log', '$state', 'Authentification'
     };
     var initCtrl = function() {
         $scope.setView = setView;
-        $scope.goToOwnProfile = goToOwnProfile;
+        $scope.goToProfile = goToProfile;
         $scope.logout = logout;
 
         setView('profile');

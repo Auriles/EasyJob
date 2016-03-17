@@ -27,14 +27,8 @@ var app = angular.module('EasyJob', ['ui.router', 'ngDialog'])
             })
             .state('particular.profile', {
                 url: '/profile',
-                params: {userID: ''},
                 templateUrl: "views/particularprofile.html",
                 controller: "particularProfileCtrl"
-            })
-            .state('particular.applications', {
-                url: '/applications',
-                templateUrl: 'views/particularapplications.html',
-                controller: 'particularApplicationsCtrl'
             })
             .state('particular.search', {
                 url: '/search',
@@ -53,7 +47,7 @@ var app = angular.module('EasyJob', ['ui.router', 'ngDialog'])
                     $state.go('frontpage');
             } else if(toState.name === 'particular'){
                 e.preventDefault();
-                $state.go('particular.profile', Authentification.getUserID());
+                $state.go('particular.profile');
             }
         })
     }]);
