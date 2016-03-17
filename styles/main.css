@@ -1,3 +1,5 @@
+/* ------------------- Frontpage ------------------- */
+
 #corps 
 {
     position: relative;
@@ -130,8 +132,6 @@ div #type
     margin-right: 10px;
 }
 
-
-
 div #type .dropdown 
 {
     height: 40px;
@@ -168,6 +168,32 @@ input[type="checkbox"] + label {
    font-weight: normal;
 }
 
+
+#slogan 
+{
+    margin-top: 6%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+#corps #slogan .btn
+{
+    margin-top: 3%;
+    font-size: 30px;
+    background-color: #1E80CC;
+    height: 50px;
+}
+
+#corps #slogan .btn:hover
+{
+    background-color: #87CEFA;
+    color: white;
+}
+
+/* ------------------- FOOTER------------------- */
+
 #footer 
 {
     background-color: #1E80CC;
@@ -191,27 +217,82 @@ input[type="checkbox"] + label {
     color: white;
 }
 
-#slogan 
-{
-    margin-top: 6%;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    font-size: 50px;
-}
+/* ------------------- PARTICULAR MAIN ------------------- */
 
-#corps #slogan .btn
+#particularView 
 {
-    margin-top: 3%;
-    font-size: 30px;
+    margin-top: 50px;
+}
+ 
+
+/* ------------------- HEADER PARTICULAR ------------------- */
+
+#headerParticular 
+{
     background-color: #1E80CC;
-    height: 50px;
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
-#corps #slogan .btn:hover
+#headerParticular .nav li .logo{
+    margin-right: 40px;
+}
+
+#headerParticular  .nav li {
+    margin-right: 0;
+}
+
+#headerParticular li a i
+{
+    margin-right: 5px;
+}
+
+#headerParticular li a:hover
+{
+    text-decoration: none;
+    background-color: #87CEFA;
+}
+
+#headerParticular li a:visited
 {
     background-color: #87CEFA;
     color: white;
+}
+
+#headerParticular .navbar-right
+{
+    margin-right: 0;
+}
+
+/* ------------------- PARTICULAR PROFILE ------------------- */
+
+.profilePic 
+{
+    max-height: 180px;
+}
+
+.profileWrapper 
+{
+    
+}
+
+.userCivilWrapper 
+{
+    
+}
+
+/* ------------------- PARTICULAR SEARCH ------------------- */
+
+.form-group 
+{
+   
+}
+
+/* ------------------- PARTICULAR APPLICATIONS ------------------- */
+
+.container {
+    
 }
 
 
