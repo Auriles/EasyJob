@@ -1,43 +1,14 @@
-<body>
-    <div id="milieu" class="container-fluid">
+<div id="milieu" class="container-fluid">
         <div class="row-fluid vertical-align height-100">
-            <div id="bloc" class="col-md-offset-2 col-md-3" >
-                <div id="entreprise" class="formContainer">
-                    <img class="icone_entreprise" src="images/icone_entreprise.png" alt="icone_entreprise">
-                    <p class="text">
-                        Entreprise
-                    </p>
-                    <form name="businessForm">
-                        <div>
-                            <input type="email" ng-model="username" class="email" placeholder="Pseudo" required>
-                        </div>
-                        <div >
-                            <input type="password" ng-model="password" class="mdp" placeholder="Mot de passe" required>
-                        </div>
-                        <button class="btn btn-default" ng-click="userLogin('business')" ng-disabled="businessForm.$invalid">Connexion</button>
-                    </form>
-                </div>
-            </div>
-            <!--<div id="logo" class="col-md-2">-->
-            <!--</div>-->
-            <div id="bloc" class="col-md-offset-2 col-md-3">
-                <div id="candidat" class="formContainer">
-                    <img class="icone_cv" src="images/icone_cv.png" alt="icone_cv">
-                    <p class="text">
-                        Candidat
-                    </p>
-                    <form name="particularForm">
-                        <div>
-                            <input type="email" ng-model="username"  class="email" placeholder="Pseudo" required>
-                        </div>
-                        <div >
-                            <input type="password" ng-model="password"  class="mdp" placeholder="Mot de passe" required>
-                        </div>
-                        <button class="btn btn-default" ng-click="userLogin('private_person')" ng-disabled="particularForm.$invalid">Connexion</button>
-                        <a ui-sref="register">Pas encore inscrit ?</a>
-                    </form>
-                </div>
-            </div>
+            <form name="loginForm" class="form-signin">
+                <label for="username">Nom d'utilisateur</label>
+                <input type="text" name="username" id="username" ng-model="credentials.username" required />
+
+                <label for="password">Mot de passe</label>
+                <input type="password" name="password" id="password" ng-model="credentials.password" required />
+
+                <button ng-disabled="loginForm.$invalid" ng-click="userLogin()">Connexion</button>
+            </form>
         </div>
     </div>
     <!--
@@ -65,5 +36,3 @@
 </div>
 
 -->
-
-</body>
