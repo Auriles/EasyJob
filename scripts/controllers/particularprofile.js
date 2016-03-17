@@ -8,20 +8,7 @@ app.controller('particularProfileCtrl', ['$scope', '$log', 'Authentification', '
     };
 
     var initCtrlWithNoBE = function(){
-        if($stateParams.userID !== Authentification.getUserID()) {
-            Users.getUserByID($stateParams.userID)
-                .then(function(data){
-                    var user;
-                    if(data){
-                        user = data;
-                    }
-                    else {
-                        user = Authentification.getUser();
-                    }
-                    console.log(user);
-                    $scope.user = user;
-                });
-        }
+        $scope.user = Authentification.getUser();
         $scope.showCV = false;
         $scope.toggleCV = toggleCV;
         $log.debug('particularProfileCtrl is initialized with fake data.');
