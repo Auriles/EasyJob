@@ -13,6 +13,11 @@ app.controller('loginCtrl', ['$scope', '$log', 'Authentification', '$state', 'ng
                 })
         }
     };
+    var goToRegister = function(){
+        ngDialog.close();
+        $state.go('register');
+    };
 
+    $scope.goToRegister = goToRegister;
     $scope.userLogin = userLogin;
 }]);

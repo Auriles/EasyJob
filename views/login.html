@@ -5,6 +5,7 @@
     <label for="password" class="sr-only">Mot de passe</label>
     <input type="password" ng-model="credentials.password" id="password" class="form-control" placeholder="Mot de passe" required>
     <button class="btn btn-lg btn-primary btn-block" ng-click="userLogin()" ng-disabled="loginForm.$invalid">Se connecter</button>
+    <a ng-click="goToRegister()">Pas encore inscrit ?</a>
 </form>
 <!--
 <div class="row vertical-align" id="login-container">

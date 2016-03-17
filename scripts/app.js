@@ -11,7 +11,7 @@ var app = angular.module('EasyJob', ['ui.router', 'ngDialog'])
                 controller: "frontPageCtrl"
             })
             .state('register', {
-                url: "/register/{userType:business|particular}",
+                url: "/register",
                 templateUrl: "views/register.html",
                 controller: "registerCtrl"
             })
