@@ -30,19 +30,17 @@ app.factory('Authentification', ['$q', '$timeout', function($q, $timeout){
                 userType: 'particular_person'
             };
 
-            deferred.resolve(user);
+            deferred.resolve(_user);
         }, 1000);
         return deferred.promise;
     };
     var forceLogOut = function(){
         _user = null;
     };
-
     // TODO: implement function
     var registerUser = function(user){
 
     };
-
     // TODO: implement function
     var updateUser = function(user){
 
