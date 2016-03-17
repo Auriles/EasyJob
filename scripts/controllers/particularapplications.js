@@ -1,12 +1,6 @@
 "use strict";
-app.controller('particularApplicationsCtrl', ['$scope', '$log', 'Applications', 'Authentification', function($scope, $log, Applications, Authentification){
+app.controller('particularApplicationsCtrl', ['$scope', '$log', 'Authentification', function($scope, $log, Authentification){
     var initCtrl = function(){
-        Applications.getApplicationsByUserID(Authentification.getUserID())
-            .then(function(data){
-                if(data) {
-                    $scope.applications = data;
-                }
-            });
     };
 
     initCtrl();

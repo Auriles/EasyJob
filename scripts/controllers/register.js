@@ -1,7 +1,7 @@
 "use strict";
 
 app.controller('registerCtrl', ['$scope', '$log', function($scope, $log){
-
+    
 }]);
 
 /**
