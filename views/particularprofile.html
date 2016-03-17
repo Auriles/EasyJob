@@ -1,125 +1,62 @@
-<div class="container profileWrapper">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-md-12 lead">Etat civil<hr></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4 text-center">
-                            <img class="img-circle avatar avatar-original profilePic" style="-webkit-user-select:none; display:block; margin:auto;" ng-src="images/user_pictures/{{user.imgSrc}}" alt="Loading..." ng-hide="!user.imgSrc">
+<body>
+    <div class="container profileWrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-12 lead">Etat civil<hr></div>
                         </div>
-                        <div class="col-md-8">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h1 class="only-bottom-margin">{{user.firstName}} {{user.lastName}}</h1>
-                                </div>
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <img class="img-circle avatar avatar-original profilePic" style="-webkit-user-select:none; display:block; margin:auto;" ng-src="images/user_pictures/{{user.imgSrc}}" alt="Loading..." ng-hide="!user.imgSrc">
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <span class="text-muted">Email:</span> {{user.mail}}<br>
-                                    <span class="text-muted">Date de naissance:</span> {{user.birthDate | dateFormat}}<br>
-                                    <span class="text-muted">Genre:</span> {{user.gender}}<br><br>
-                                    <small class="text-muted">Inscription: {{user.signInDate | dateFormat}}</small>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="activity-mini">
-                                        <i class="glyphicon glyphicon-thumbs-up text-muted"></i> 500
-                                    </div>
-                                    <div class="activity-mini">
-                                        <i class="glyphicon glyphicon-star text-muted"></i> {{user.score}}%
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1 class="only-bottom-margin">{{user.firstName}} {{user.lastName}}</h1>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span class="text-muted">Email:</span> {{user.mail}}<br>
+                                        <span class="text-muted">Date de naissance:</span> {{user.birthDate | dateFormat}}<br>
+                                        <span class="text-muted">Genre:</span> {{user.gender}}<br><br>
+                                        <small class="text-muted">Inscription: {{user.signInDate | dateFormat}}</small>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="activity-mini">
+                                            <i class="glyphicon glyphicon-thumbs-up text-muted"></i> 500
+                                        </div>
+                                        <div class="activity-mini">
+                                            <i class="glyphicon glyphicon-star text-muted"></i> {{user.score}}%
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <button class="btn btn-default pull-right" ng-click="toggleCV()">{{showCV ? 'Cacher' : 'Montrer'}} le CV <i ng-class="{'glyphicon': true, 'glyphicon-menu-down': showCV, 'glyphicon-menu-right': !showCV}"></i></button>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button class="btn btn-default pull-right" ng-click="toggleCV()">{{showCV ? 'Cacher' : 'Montrer'}} le CV <i ng-class="{'glyphicon': true, 'glyphicon-menu-down': showCV, 'glyphicon-menu-right': !showCV}"></i></button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row" ng-show="showCV">
-                        <div class="col-md-12 lead">
-                            <hr>Curriculum Vitae<hr>
+                        <div class="row" ng-show="showCV">
+                            <div class="col-md-12 lead">
+                                <hr>Curriculum Vitae<hr>
+                            </div>
+                            <div class="cvContent">
+
+                            </div>
                         </div>
-                        <div class="cvContent">
-                            <pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            </pre>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-<!-- TODO: change ng-click-->
-                            <hr><button class="btn btn-default pull-right" ng-click="goToProfile(2)">Autre profile</button>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- TODO: change ng-click-->
+                                <hr><button class="btn btn-default pull-right" ng-click="goToProfile(2)">Autre profile</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</body>

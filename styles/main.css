@@ -262,7 +262,7 @@ input[type="checkbox"] + label {
 #headerParticular li a:visited
 {
     background-color: #87CEFA;
-    color: white;
+    color: white
 }
 
 #headerParticular .navbar-right
@@ -289,9 +289,14 @@ input[type="checkbox"] + label {
 
 /* ------------------- PARTICULAR SEARCH ------------------- */
 
-.form-group 
+#particularSearch
 {
-   
+    display: flex; 
+    vertical-align: middle;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    height: 100px;
+    margin-top: -50px;
 }
 
 /* ------------------- PARTICULAR APPLICATIONS ------------------- */

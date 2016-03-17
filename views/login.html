@@ -1,17 +1,16 @@
-<div id="milieu" class="container-fluid">
-        <div class="row-fluid vertical-align height-100">
-            <form name="loginForm" class="form-signin">
-                <label for="username">Nom d'utilisateur</label>
-                <input type="text" name="username" id="username" ng-model="credentials.username" required />
+<body>
+    <form name="loginForm" class="form-signin">
+        <label for="username">Nom d'utilisateur</label>
+        <input type="text" name="username" id="username" ng-model="credentials.username" required />
 
-                <label for="password">Mot de passe</label>
-                <input type="password" name="password" id="password" ng-model="credentials.password" required />
+        <label for="password">Mot de passe</label>
+        <input type="password" name="password" id="password" ng-model="credentials.password" required />
 
-                <button ng-disabled="loginForm.$invalid" ng-click="userLogin()">Connexion</button>
-            </form>
-        </div>
-    </div>
-    <!--
+        <button ng-disabled="loginForm.$invalid" ng-click="userLogin()">Connexion</button>
+    </form>
+
+</body>
+<!--
 <div class="row vertical-align" id="login-container">
 <div class="col-sm-6 container" ng-show="!side">
 <button class="btn btn-lg btn-default center" ng-click="setSide('business')">Entreprise</button>
