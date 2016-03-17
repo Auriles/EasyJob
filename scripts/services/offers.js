@@ -3,12 +3,10 @@
 app.factory('Offers', ['$q', '$timeout', function($q, $timeout){
     var offerCollection = [];
 
-    var getOffersByBusinessId = function(){
-        // TODO: implement function
-    };
     var getOffersByUser = function(){
         // TODO: implement function
     };
+
     var searchOffer = function(searchCriteria){
         // TODO: implement function
     };
@@ -17,7 +15,6 @@ app.factory('Offers', ['$q', '$timeout', function($q, $timeout){
         getOffers: function(){
             return offerCollection;
         },
-        getOffersByBusinessId: getOffersByBusinessId,
         getOffersByUser: getOffersByUser,
         searchOffer: searchOffer
     }
