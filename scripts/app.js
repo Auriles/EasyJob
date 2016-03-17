@@ -3,15 +3,20 @@
 var app = angular.module('EasyJob', ['ui.router'])
     // States config
     .config(function($stateProvider, $urlRouterProvider){
-        $urlRouterProvider.otherwise("/login");
+        $urlRouterProvider.otherwise("/");
         $stateProvider
+            .state('frontpage', {
+                url: "/",
+                templateUrl: "views/frontpage.html",
+                controller: "frontPageCtrl"
+            })
             .state('login', {
                 url: "/login",
                 templateUrl: "views/login.html",
                 controller: "loginCtrl"
             })
             .state('register', {
-                url: "/register",
+                url: "/register/{userType:business|particular}",
                 templateUrl: "views/register.html",
                 controller: "registerCtrl"
             })
@@ -43,9 +48,9 @@ var app = angular.module('EasyJob', ['ui.router'])
         $rootScope.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams) {
             console.log(toState.name + ' : ' + toParams.userID);
 
-            if (!Authentification.isLoggedIn() && toState.name !== 'login' && toState.name !== 'register') {
+            if (!Authentification.isLoggedIn() && toState.name !== 'frontpage' && toState.name !== 'register' && toState.name !== 'login'){
                     e.preventDefault();
-                    $state.go('login');
+                    $state.go('frontpage');
             } else if(toState.name === 'particular'){
                 e.preventDefault();
                 $state.go('particular.profile', Authentification.getUserID());
