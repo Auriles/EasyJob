@@ -19,7 +19,8 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <span class="text-muted">Email:</span> {{user.mail}}<br>
+                                        <span class="text-muted">Email:</span> <input type="mail" ng-model="user.mail" ng-disabled="editMode"><br>
+
                                         <span class="text-muted">Date de naissance:</span> {{user.birthDate | dateFormat}}<br>
                                         <span class="text-muted">Genre:</span> {{user.gender}}<br><br>
                                         <small class="text-muted">Inscription: {{user.signInDate | dateFormat}}</small>

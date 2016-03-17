@@ -40,8 +40,6 @@ var app = angular.module('EasyJob', ['ui.router', 'ngDialog'])
     // State change scripts
     .run(['$rootScope', '$state', 'Authentification', function($rootScope, $state, Authentification){
         $rootScope.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams) {
-            console.log(toState.name + ' : ' + toParams.userID);
-
             if (!Authentification.isLoggedIn() && toState.name !== 'frontpage' && toState.name !== 'register'){
                     e.preventDefault();
                     $state.go('frontpage');
