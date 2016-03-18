@@ -11,10 +11,16 @@ app.controller('registerCtrl', ['$scope', 'Authentification', '$state', function
 
     $scope.register = function(){
         var user = $scope.user;
-        Authentification.registerUser(user)
-            .then(function(){
-                $state.go('particular.profile')
-            })
+        if($scope.user.password === $scope.passwordConfirmation && $scope.user.mail === $scope.mailConfirmation){
+            Authentification.registerUser(user)
+                .then(function(){
+                    $state.go('particular.profile')
+                })
+        }else if($scope.user.password !== $scope.passwordConfirmation){
+            $scope.passError = 'Votre mot de passe et la confirmation diffèrent'
+        }else if($scope.user.mail !== $scope.mailConfirmation){
+            $scope.mailError = 'Votre mail et la confirmation diffèrent'
+        }
     };
     $scope.edit = function(){
         var user = $scope.user;

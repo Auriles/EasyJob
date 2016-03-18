@@ -17,4 +17,10 @@ app.controller('frontPageCtrl', ['$scope', 'ngDialog', 'Offers', function($scope
                 $scope.result = offers;
             })
     }
+    $scope.requestServer = function(){
+        $http({
+            method: 'GET',
+            url: '/getUser'
+        });
+    }
 }]);

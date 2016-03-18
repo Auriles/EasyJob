@@ -41,6 +41,7 @@
             <div class="col-md-4">
                 <input id="mailConfirm" name="mailConfirm" type="text" placeholder="confirmation" class="form-control input-md" ng-model="mailConfirmation" required>
             </div>
+            <div class="error">{{mailError}}</div>
         </div>
 
         <!-- Password input -->
@@ -57,6 +58,7 @@
             <div class="col-md-4">
                 <input id="passwordConfirmation" name="passwordConfirmation" type="password" placeholder="confirmation" ng-model="passwordConfirmation" class="form-control input-md" ng-required="!hideFields">
             </div>
+            <div class="error">{{passError}}</div>
         </div>
 
         <!-- Adress input-->
