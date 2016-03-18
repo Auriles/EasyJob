@@ -1,15 +1,12 @@
-<body>
-    <form name="loginForm" class="form-signin">
-        <label for="username">Nom d'utilisateur</label>
-        <input type="text" name="username" id="username" ng-model="credentials.username" required />
-
-        <label for="password">Mot de passe</label>
-        <input type="password" name="password" id="password" ng-model="credentials.password" required />
-
-        <button ng-disabled="loginForm.$invalid" ng-click="userLogin()">Connexion</button>
-    </form>
-
-</body>
+<form name="loginForm" class="form-signin" style="height: 180px;">
+    <h2 class="form-signin-heading">Connexion</h2>
+    <label for="username" class="sr-only">Nom d'utilisateur</label>
+    <input type="text" ng-model="credentials.username" id="username" class="form-control" placeholder="Nom d'utilisateur" required autofocus>
+    <label for="password" class="sr-only">Mot de passe</label>
+    <input type="password" ng-model="credentials.password" id="password" class="form-control" placeholder="Mot de passe" required>
+    <button class="btn btn-lg btn-primary btn-block" ng-click="userLogin()" ng-disabled="loginForm.$invalid">Se connecter</button>
+    <a ng-click="goToRegister()">Pas encore inscrit ?</a>
+</form>
 <!--
 <div class="row vertical-align" id="login-container">
 <div class="col-sm-6 container" ng-show="!side">

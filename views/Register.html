@@ -4,65 +4,59 @@
         <!-- Form Name -->
         <legend>Inscription</legend>
 
-        <!-- Text input-->
+        <!-- LastName input-->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="fn">Nom</label>  
+            <label class="col-md-4 control-label" for="lastName">Nom</label>
             <div class="col-md-4">
-                <input id="fn" name="fn" type="text" placeholder="Nom" class="form-control input-md" required="">
+                <input id="lastName" name="lastName" type="text" placeholder="Nom" class="form-control input-md" ng-model="user.lastName" required>
             </div>
         </div>
 
-        <!-- Text input-->
+        <!-- FirstName input-->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="ln">Prenom</label>  
+            <label class="col-md-4 control-label" for="firstName">Prenom</label>
             <div class="col-md-4">
-                <input id="ln" name="ln" type="text" placeholder="Prénom" class="form-control input-md" required="">
+                <input id="firstName" name="firstName" type="text" placeholder="Prénom" class="form-control input-md" ng-model="user.firstName" required>
             </div>
         </div>
 
-        <!-- Text input-->
+        <!-- Mail input-->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="email">Email</label>  
+            <label class="col-md-4 control-label" for="mail">Email</label>
             <div class="col-md-4">
-                <input id="email" name="email" type="text" placeholder="" class="form-control input-md" required="">
+                <input id="mail" name="mail" type="mail" placeholder="nom@example.com" class="form-control input-md" ng-model="user.mail" required>
             </div>
         </div>
 
-        <!-- Text input-->
+        <!-- Mail confirmation input-->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="email">Confirmation email</label>  
+            <label class="col-md-4 control-label" for="mailConfirm">Confirmation email</label>
             <div class="col-md-4">
-                <input id="cemail" name="cemail" type="text" placeholder="cemail" class="form-control input-md" required="">
+                <input id="mailConfirm" name="mailConfirm" type="text" placeholder="confirmation" class="form-control input-md" ng-model="mailConfirmation" required>
             </div>
         </div>
 
+        <!-- Password input -->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="email">Mot de passe</label>  
+            <label class="col-md-4 control-label" for="password">Mot de passe</label>
             <div class="col-md-4">
-                <input id="password" name="password" type="text" placeholder="password" class="form-control input-md" required="">
+                <input id="password" name="password" type="password" placeholder="password" class="form-control input-md" ng-model="user.password" required>
             </div>
         </div>
 
+        <!-- Password confirmation input -->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="email">Confirmation email</label>  
+            <label class="col-md-4 control-label" for="passwordConfirmation">Confirmation mot de passe</label>
             <div class="col-md-4">
-                <input id="cpassword" name="cpassword" type="text" placeholder="cpassword" class="form-control input-md" required="">
+                <input id="passwordConfirmation" name="passwordConfirmation" type="password" placeholder="confirmation" ng-model="passwordConfirmation" class="form-control input-md" required>
             </div>
         </div>
 
-        <!-- Text input-->
+        <!-- Adress input-->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="add1">Addresse</label>  
+            <label class="col-md-4 control-label" for="adress">Addresse</label>
             <div class="col-md-4">
-                <input id="add1" name="add1" type="text" placeholder="" class="form-control input-md" required="">
-            </div>
-        </div>
-
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="add2">Complément d'adresse</label>  
-            <div class="col-md-4">
-                <input id="add2" name="add2" type="text" placeholder="" class="form-control input-md">
+                <textarea class="form-control input-md" name="adress" id="adress" ng-model="user.adress"></textarea>
             </div>
         </div>
 
@@ -70,7 +64,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="city">Ville</label>  
             <div class="col-md-4">
-                <input id="city" name="city" type="text" placeholder="" class="form-control input-md" required="">
+                <input id="city" name="city" type="text" placeholder="" class="form-control input-md" ng-model="user.town" required>
             </div>
         </div>
 
@@ -78,24 +72,15 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="zip">Code Postal</label>  
             <div class="col-md-4">
-                <input id="zip" name="zip" type="text" placeholder="Code Postal" class="form-control input-md" required="">
+                <input id="zip" name="zip" type="text" placeholder="Code Postal" class="form-control input-md" ng-model="user.zip" required>
             </div>
         </div>
-
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="ctry">Pays</label>  
-            <div class="col-md-4">
-                <input id="ctry" name="ctry" type="text" placeholder="Pays" class="form-control input-md" required="">
-            </div>
-        </div>
-
 
         <!-- Button -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="submit"></label>
             <div class="col-md-4">
-                <button id="submit" name="submit" class="btn btn-primary">S'inscricre</button>
+                <button id="submit" name="submit" class="btn btn-primary" ng-click="register()">S'inscrire</button>
             </div>
         </div>
 

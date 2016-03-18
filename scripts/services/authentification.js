@@ -25,9 +25,7 @@ app.factory('Authentification', ['$q', '$timeout', function($q, $timeout){
                 gender: 'femme',
                 birthDate: 5420178954,
                 mail: 'please@givemea.job',
-                signInDate: 954542017897,
-                score: '58',
-                userType: 'particular_person'
+                signInDate: 954542017897
             };
 
             deferred.resolve(_user);

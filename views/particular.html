@@ -8,10 +8,6 @@
                 <li ng-class="{active: selectedView === 'profile'}">
                     <a class="fdp" ui-sref="particular.profile" ng-click="goToOwnProfile()"><i class="glyphicon glyphicon-user"></i>Mon profile</a>
                 </li>
-                <li ng-class="{active: selectedView === 'applications'}">
-                    <a ui-sref="particular.applications" ng-click="setView('applications')">
-                        <i class="glyphicon glyphicon-stats"></i>Suivi des candidatures</a>
-                </li>
                 <li ng-class="{active: selectedView === 'search'}">
                     <a ui-sref="particular.search" ng-click="setView('search')"><i class="glyphicon glyphicon-search"></i>Recherche</a>
                 </li>
@@ -19,7 +15,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a ui-sref="login"><i class="glyphicon glyphicon-log-out"></i>Se déconnecter</a>
+                    <a ng-click="logout()"><i class="glyphicon glyphicon-log-out"></i>Se déconnecter</a>
                 </li>
             </ul>
         </div>

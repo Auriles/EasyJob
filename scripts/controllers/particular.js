@@ -1,15 +1,20 @@
 "use strict";
 
-app.controller('particularCtrl', ['$scope', '$log', '$state', function($scope, $log, $state){
+app.controller('particularCtrl', ['$scope', '$log', '$state', 'Authentification', function($scope, $log, $state, Authentification){
     var setView = function(view){
         $scope.selectedView = view;
     };
-    var goToOwnProfile = function(){
-        $state.go('particular.profile', {userID: ''}, {reload: true});
+    var goToProfile = function(){
+        $state.go('particular.profile');
+    };
+    var logout = function(){
+        Authentification.forceLogOut();
+        $state.go('frontpage');
     };
     var initCtrl = function() {
         $scope.setView = setView;
-        $scope.goToOwnProfile = goToOwnProfile;
+        $scope.goToProfile = goToProfile;
+        $scope.logout = logout;
 
         setView('profile');
         $log.debug('particularCtrl is initialized.');

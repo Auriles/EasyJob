@@ -1,6 +1,6 @@
 "use strict";
 
-var app = angular.module('EasyJob', ['ui.router'])
+var app = angular.module('EasyJob', ['ui.router', 'ngDialog'])
     // States config
     .config(function($stateProvider, $urlRouterProvider){
         $urlRouterProvider.otherwise("/");
@@ -10,13 +10,8 @@ var app = angular.module('EasyJob', ['ui.router'])
                 templateUrl: "views/frontpage.html",
                 controller: "frontPageCtrl"
             })
-            .state('login', {
-                url: "/login",
-                templateUrl: "views/login.html",
-                controller: "loginCtrl"
-            })
             .state('register', {
-                url: "/register/{userType:business|particular}",
+                url: "/register",
                 templateUrl: "views/register.html",
                 controller: "registerCtrl"
             })
@@ -32,14 +27,8 @@ var app = angular.module('EasyJob', ['ui.router'])
             })
             .state('particular.profile', {
                 url: '/profile',
-                params: {userID: ''},
                 templateUrl: "views/particularprofile.html",
                 controller: "particularProfileCtrl"
-            })
-            .state('particular.applications', {
-                url: '/applications',
-                templateUrl: 'views/particularapplications.html',
-                controller: 'particularApplicationsCtrl'
             })
             .state('particular.search', {
                 url: '/search',
@@ -51,14 +40,12 @@ var app = angular.module('EasyJob', ['ui.router'])
     // State change scripts
     .run(['$rootScope', '$state', 'Authentification', function($rootScope, $state, Authentification){
         $rootScope.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams) {
-            console.log(toState.name + ' : ' + toParams.userID);
-
-            if (!Authentification.isLoggedIn() && toState.name !== 'frontpage' && toState.name !== 'register' && toState.name !== 'login'){
+            if (!Authentification.isLoggedIn() && toState.name !== 'frontpage' && toState.name !== 'register'){
                     e.preventDefault();
                     $state.go('frontpage');
             } else if(toState.name === 'particular'){
                 e.preventDefault();
-                $state.go('particular.profile', Authentification.getUserID());
+                $state.go('particular.profile');
             }
         })
     }]);

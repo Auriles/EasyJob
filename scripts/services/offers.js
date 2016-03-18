@@ -8,6 +8,38 @@ app.factory('Offers', ['$q', '$timeout', function($q, $timeout){
     };
 
     var searchOffer = function(searchCriteria){
+        var deferred = $q.defer();
+        $timeout(function(){
+            var offers = [
+                {
+                    title: 'Grand maitre shaman',
+                    description: 'Ego vero sic intellego, Patres conscripti, nos hoc tempore in ' +
+                    'provinciis decernendis perpetuae pacis habere oportere rationem. ' +
+                    'Nam quis hoc non sentit omnia alia esse nobis vacua ab omni ' +
+                    'periculo atque etiam suspicione belli?',
+                    salary: 75000
+                },
+                {
+                    title: 'Dompteur d\'ours',
+                    description: 'Ego vero sic intellego, Patres conscripti, nos hoc tempore in ' +
+                    'provinciis decernendis perpetuae pacis habere oportere rationem. ' +
+                    'Nam quis hoc non sentit omnia alia esse nobis vacua ab omni ' +
+                    'periculo atque etiam suspicione belli?',
+                    salary: 35000
+                },
+                {
+                    title: 'Gérant',
+                    description: 'Ego vero sic intellego, Patres conscripti, nos hoc tempore in ' +
+                    'provinciis decernendis perpetuae pacis habere oportere rationem. ' +
+                    'Nam quis hoc non sentit omnia alia esse nobis vacua ab omni ' +
+                    'periculo atque etiam suspicione belli?',
+                    salary: 25000
+                }
+            ];
+            offerCollection = offers;
+            deferred.resolve(offerCollection);
+        }, 1000);
+        return deferred.promise;
         // TODO: implement function
     };
 
