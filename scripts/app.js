@@ -30,6 +30,11 @@ var app = angular.module('EasyJob', ['ui.router', 'ngDialog'])
                 templateUrl: "views/particularprofile.html",
                 controller: "particularProfileCtrl"
             })
+            .state('particular.edit', {
+                url: "/edit",
+                templateUrl: "views/register.html",
+                controller: "registerCtrl"
+            })
             .state('particular.search', {
                 url: '/search',
                 templateUrl: 'views/particularsearch.html',

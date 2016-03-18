@@ -11,10 +11,7 @@ app.controller('particularProfileCtrl', ['$scope', '$log', 'Authentification', '
         $scope.user = Authentification.getUser();
         $scope.showCV = false;
         $scope.toggleCV = toggleCV;
-        $log.debug('particularProfileCtrl is initialized with fake data.');
     };
-
-    // TODO: initiate controller with BE's data
     initCtrl();
 }]);
 /**

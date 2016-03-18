@@ -22,7 +22,7 @@ app.controller('loginCtrl', ['$scope', '$log', 'Authentification', '$state', 'ng
     };
     var goToRegister = function(){
         ngDialog.close();
-        $state.go('register');
+        $state.go('register', 'register');
     };
 
     $scope.goToRegister = goToRegister;

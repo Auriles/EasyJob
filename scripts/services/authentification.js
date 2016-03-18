@@ -17,7 +17,6 @@ app.factory('Authentification', ['$q', '$timeout', function($q, $timeout){
         // TODO: implement logging-in
         $timeout(function(){
             _user = {
-                userID: 1,
                 imgSrc: 'test.jpg',
                 nickname: credentials.username,
                 lastName: 'McDeath',
@@ -25,7 +24,10 @@ app.factory('Authentification', ['$q', '$timeout', function($q, $timeout){
                 gender: 'femme',
                 birthDate: 5420178954,
                 mail: 'please@givemea.job',
-                signInDate: 954542017897
+                signInDate: 954542017897,
+                adress: '18 rue des peupliers',
+                town: 'Paris',
+                zip: '75000'
             };
 
             deferred.resolve(_user);

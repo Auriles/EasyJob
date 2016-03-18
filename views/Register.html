@@ -2,7 +2,7 @@
     <fieldset>
 
         <!-- Form Name -->
-        <legend>Inscription</legend>
+        <legend>{{hideFields ? 'Modifier le profil' : 'Inscription'}}</legend>
 
         <!-- LastName input-->
         <div class="form-group">
@@ -40,7 +40,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="password">Mot de passe</label>
             <div class="col-md-4">
-                <input id="password" name="password" type="password" placeholder="password" class="form-control input-md" ng-model="user.password" required>
+                <input id="password" name="password" type="password" placeholder="password" class="form-control input-md" ng-model="user.password" ng-required="!hideFields">
             </div>
         </div>
 
@@ -48,7 +48,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="passwordConfirmation">Confirmation mot de passe</label>
             <div class="col-md-4">
-                <input id="passwordConfirmation" name="passwordConfirmation" type="password" placeholder="confirmation" ng-model="passwordConfirmation" class="form-control input-md" required>
+                <input id="passwordConfirmation" name="passwordConfirmation" type="password" placeholder="confirmation" ng-model="passwordConfirmation" class="form-control input-md" ng-required="!hideFields">
             </div>
         </div>
 
@@ -80,7 +80,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="submit"></label>
             <div class="col-md-4">
-                <button id="submit" name="submit" class="btn btn-primary" ng-click="register()">S'inscrire</button>
+                <button id="submit" name="submit" class="btn btn-primary" ng-click="register()">{{hideFields ? 'Editer' : 'S\'inscrire'}}</button>
             </div>
         </div>
 
