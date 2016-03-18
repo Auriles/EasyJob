@@ -1,0 +1,45 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom de l'entreprise</th>
+                <th>Poste</th>
+                <th>Email</th>
+                <th>Etat de la candidature</th>
+                <th>Dernière mise à jour</th>
+                <!-- MANAGED BY UPDATE TIME -->
+            </tr>
+        </thead>
+                <!-- ADD SCRIPT TO FILL AUTOMATICALLY -->
+        <tbody>
+        <tr ng-repeat="appl in applications">
+            <td>{{appl.offer.businessName}}</td>
+            <td>{{appl.offer.job}}</td>
+            <td>{{appl.offer.contact}}</td>
+            <td>{{appl.status}}</td>
+            <td>{{appl.lastUpdate | timeRemaining}}</td>
+        </tr>
+            <!--<tr>-->
+                <!--<td>Les Photocopies</td>-->
+                <!--<td>Esclave de photocopieuse</td>-->
+                <!--<td>jaimefairedesphotocopies@esclave.com</td>-->
+                <!--<td>En attente de rendez-vous</td>-->
+                <!--<td>Il y a 13heures</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td>Le Pingouin d'antartique</td>-->
+                <!--<td>Chercheur de café</td>-->
+                <!--<td>capuccino@esclave.com</td>-->
+                <!--<td>Refusé</td>-->
+                <!--<td>Il y a 5jours</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td>Pikachu</td>-->
+                <!--<td>Rat electrique</td>-->
+                <!--<td>pikachu@pokemon.com</td>-->
+                <!--<td>Envoyé</td>-->
+                <!--<td>Il y a 5min</td>-->
+            <!--</tr>-->
+        </tbody>
+    </table>
+</div>
