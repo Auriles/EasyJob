@@ -15,23 +15,30 @@ app.factory('Authentification', ['$q', '$timeout', function($q, $timeout){
     var loggingIn = function(credentials){
         var deferred = $q.defer();
         // TODO: implement logging-in
-        $timeout(function(){
-            _user = {
-                imgSrc: 'test.jpg',
-                nickname: credentials.username,
-                lastName: 'McDeath',
-                firstName: 'Hjördis',
-                gender: 'femme',
-                birthDate: 5420178954,
-                mail: 'please@givemea.job',
-                signInDate: 954542017897,
-                adress: '18 rue des peupliers',
-                town: 'Paris',
-                zip: '75000'
-            };
+        if(credentials.username == 'user' && credentials.password == 'adf34f3e63a8e0bd2938f3e09ddc161125a031c3c86d06ec59574a5c723e7fdbe04c2c15d9171e05e90a9c822936185f12b9d7384b2bedb02e75c4c5fe89e4d4') {
+            $timeout(function () {
+                _user = {
+                    imgSrc: 'test.jpg',
+                    nickname: credentials.username,
+                    lastName: 'McDeath',
+                    firstName: 'Hjördis',
+                    gender: 'femme',
+                    birthDate: 5420178954,
+                    mail: 'please@givemea.job',
+                    signInDate: 954542017897,
+                    adress: '18 rue des peupliers',
+                    town: 'Paris',
+                    zip: '75000'
+                };
 
-            deferred.resolve(_user);
-        }, 1000);
+
+                deferred.resolve(_user);
+            }, 1000);
+        }else {
+            $timeout(function(){
+                deferred.reject();
+            }, 1000);
+        }
         return deferred.promise;
     };
     var forceLogOut = function(){
