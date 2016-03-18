@@ -13,5 +13,8 @@ app.controller('frontPageCtrl', ['$scope', 'ngDialog', 'Offers', function($scope
         var criteria = $scope.criteria;
         console.log(criteria);
         Offers.searchOffer(criteria)
+            .then(function(offers){
+                $scope.result = offers;
+            })
     }
 }]);
