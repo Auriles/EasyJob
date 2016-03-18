@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller('frontPageCtrl', ['$scope', 'ngDialog', 'Offers', function($scope, ngDialog, Offers){
+app.controller('frontPageCtrl', ['$scope', 'ngDialog', 'Offers', '$http', function($scope, ngDialog, Offers, $http){
     var showLogin = function(){
         ngDialog.open({
             template: 'views/login.html',
