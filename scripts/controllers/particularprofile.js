@@ -1,7 +1,7 @@
 "use strict";
 
-app.controller('particularProfileCtrl', ['$scope', '$log', 'Authentification', '$stateParams', '$state', '$rootScope',
-    function($scope, $log, Authentification, $stateParams, $state, $rootScope){
+app.controller('particularProfileCtrl', ['$scope', '$log', 'Authentification', 'Cv',
+    function($scope, $log, Authentification, Cv){
 
     var toggleCV = function(){
         $scope.showCV = !$scope.showCV;

@@ -30,8 +30,6 @@ app.factory('Authentification', ['$q', '$timeout', function($q, $timeout){
                     town: 'Paris',
                     zip: '75000'
                 };
-
-
                 deferred.resolve(_user);
             }, 1000);
         }else {

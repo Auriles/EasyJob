@@ -11,7 +11,6 @@ app.controller('loginCtrl', ['$scope', '$log', 'Authentification', '$state', 'ng
         console.log(credential);
 
             // TODO: implement loggin
-            $log.debug('Login process started.');
             Authentification.loggingIn(credential)
                 .then(function(data){
                     console.log(CryptoJS.SHA3($scope.credentials.password).toString());
@@ -19,7 +18,7 @@ app.controller('loginCtrl', ['$scope', '$log', 'Authentification', '$state', 'ng
                     $state.go('particular.profile', data.userID);
                 },
                 function(){
-                    $scope.error = 'Mauvais nom d\'utilisateur/mot de passe';
+                    $scope.error = 'Mauvais nom d\'utilisateur et/ou de mot de passe';
                 })
         }
     };

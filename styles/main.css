@@ -5,6 +5,11 @@
     margin:0;
 }
 
+.error
+{
+    color: #c12e2a;
+}
+
 /* ------------------- Frontpage ------------------- */
 
 #corps 
@@ -331,12 +336,6 @@ input[type="checkbox"] + label {
     background-color: rgba(0,0,0,0.7);
     height: 100px;
     margin-top: -40px;
-}
-
-/* ------------------- PARTICULAR APPLICATIONS ------------------- */
-
-.container {
-    
 }
 
 
