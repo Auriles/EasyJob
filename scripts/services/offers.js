@@ -18,7 +18,8 @@ app.factory('Offers', ['$q', '$timeout', function($q, $timeout){
                     'Nam quis hoc non sentit omnia alia esse nobis vacua ab omni ' +
                     'periculo atque etiam suspicione belli?',
                     salary: 75000,
-                    company: 'Air France'
+                    company: 'Air France',
+                    type: 'CDI'
                 },
                 {
                     title: 'Dompteur d\'ours',
@@ -27,7 +28,8 @@ app.factory('Offers', ['$q', '$timeout', function($q, $timeout){
                     'Nam quis hoc non sentit omnia alia esse nobis vacua ab omni ' +
                     'periculo atque etiam suspicione belli?',
                     salary: 35000,
-                    company: 'HSBC'
+                    company: 'HSBC',
+                    type: 'CDD'
                 },
                 {
                     title: 'Gérant',
@@ -36,7 +38,8 @@ app.factory('Offers', ['$q', '$timeout', function($q, $timeout){
                     'Nam quis hoc non sentit omnia alia esse nobis vacua ab omni ' +
                     'periculo atque etiam suspicione belli?',
                     salary: 25000,
-                    company: 'Camping municipal'
+                    company: 'Camping municipal',
+                    type: 'Stage'
                 }
             ];
             offerCollection = offers;
