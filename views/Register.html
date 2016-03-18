@@ -4,6 +4,13 @@
         <!-- Form Name -->
         <legend>{{hideFields ? 'Modifier le profil' : 'Inscription'}}</legend>
 
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="nickname">Nom d'utilisateur</label>
+            <div class="col-md-4">
+                <input id="nickname" name="nickname" type="text" placeholder="Nom" class="form-control input-md" ng-model="user.nickname" required>
+            </div>
+        </div>
+
         <!-- LastName input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="lastName">Nom</label>
@@ -80,7 +87,8 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="submit"></label>
             <div class="col-md-4">
-                <button id="submit" name="submit" class="btn btn-primary" ng-click="register()">{{hideFields ? 'Editer' : 'S\'inscrire'}}</button>
+                <button id="submit" name="submit" class="btn btn-primary" ng-click="register()" ng-hide="hideFields">S'inscrire</button>
+                <button id="submit" name="submit" class="btn btn-primary" ng-click="edit()" ng-show="hideFields">Editer</button>
             </div>
         </div>
 

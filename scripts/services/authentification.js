@@ -39,11 +39,82 @@ app.factory('Authentification', ['$q', '$timeout', function($q, $timeout){
     };
     // TODO: implement function
     var registerUser = function(user){
+        var deferred = $q.defer();
 
+        $timeout(function(){
+            var data = {
+                nickname: user.nickname,
+                lastName: user.lastName,
+                firstName: user.firstName,
+                gender: user.gender,
+                birthDate: user.birthDate,
+                mail: user.mail,
+                signInDate: Date.now().toString(),
+                adress: user.adress,
+                town: user.town,
+                zip: user.zip
+            };
+            console.log(data);
+            _user = data;
+            deferred.resolve(data);
+        }, 1000);
+
+        return deferred.promise;
     };
     // TODO: implement function
     var updateUser = function(user){
+        var deferred = $q.defer();
 
+        var update = {};
+
+        if(user.nickname && user.nickname != _user.nickname){
+            update.nickname = user.nickname;
+        }
+        if(user.lastName && user.lastName != _user.lastName){
+            update.lastName = user.lastName;
+        }
+        if(user.firstName && user.firstName != _user.firstName){
+            update.firstName = user.firstName;
+        }
+        if(user.gender && user.gender != _user.gender){
+            update.gender = user.gender;
+        }
+        if(user.birthDate && user.birthDate != _user.birthDate){
+            update.birthDate = user.birthDate;
+        }
+        if(user.mail && user.mail != _user.mail){
+            update.mail = user.mail;
+        }
+        if(user.adress && user.adress != _user.adress){
+            update.adress = user.adress;
+        }
+        if(user.town && user.town != _user.town){
+            update.town = user.town;
+        }
+        if(user.zip && user.zip != _user.zip) {
+            update.zip = user.zip;
+        }
+        console.log(update);
+
+        $timeout(function(){
+            var data = {
+                nickname: update.nickname || _user.nickname,
+                lastName: update.lastName || _user.lastName,
+                firstName: update.firstName || _user.firstName,
+                gender: update.gender || _user.gender,
+                birthDate: update.birthDate || _user.birthDate,
+                mail: update.mail || _user.mail,
+                signInDate: _user.signInDate,
+                adress: update.adress || _user.adress,
+                town: update.town || _user.town,
+                zip: update.zip || _user.zip
+            };
+            console.log(data);
+            _user = data;
+            deferred.resolve(data);
+        }, 1000);
+
+        return deferred.promise;
     };
 
     return {
