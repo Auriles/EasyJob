@@ -253,16 +253,50 @@ input[type="checkbox"] + label {
     margin-right: 5px;
 }
 
+#headerParticular li .fdp:visited
+{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+#headerParticular li a:focus
+{
+    background-color: white;
+    color: black;
+}
+
+#headerParticular li .fdp:hover
+{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+#headerParticular li .fdp:focus
+{
+    background-color: white;
+    color: black;
+}
+
 #headerParticular li a:hover
 {
     text-decoration: none;
-    background-color: #87CEFA;
+    background-color: white;
+    color: black;
+}
+
+#headerParticular li a:focus
+{
+    background-color: white;
+    color: black;
 }
 
 #headerParticular li a:visited
 {
-    background-color: #87CEFA;
-    color: white
+    text-decoration: none;
+    background-color: white;
+    color: black;
 }
 
 #headerParticular .navbar-right
@@ -296,7 +330,7 @@ input[type="checkbox"] + label {
     width: 100%;
     background-color: rgba(0,0,0,0.7);
     height: 100px;
-    margin-top: -50px;
+    margin-top: -40px;
 }
 
 /* ------------------- PARTICULAR APPLICATIONS ------------------- */
