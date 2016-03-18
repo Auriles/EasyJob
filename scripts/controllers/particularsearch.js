@@ -1,14 +1,12 @@
 "use strict";
 
-app.controller('particularSearchCtrl', ['$scope', '$log', function($scope, $log){
-    var toggleSearch = function(){
-        $scope.advancedSearch = !$scope.advancedSearch;
-    };
-
-    var initCtrl = function(){
-        $scope.advancedSearch = false;
-        $scope.toggleSearch = toggleSearch;
-    };
-
-    initCtrl();
+app.controller('particularSearchCtrl', ['$scope', '$log', 'Offers', function($scope, $log, Offers){
+    $scope.search = function(){
+        var criteria = $scope.criteria;
+        console.log(criteria);
+        Offers.searchOffer(criteria)
+            .then(function(offers){
+                $scope.result = offers;
+            })
+    }
 }]);

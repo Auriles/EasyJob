@@ -17,7 +17,8 @@ app.factory('Offers', ['$q', '$timeout', function($q, $timeout){
                     'provinciis decernendis perpetuae pacis habere oportere rationem. ' +
                     'Nam quis hoc non sentit omnia alia esse nobis vacua ab omni ' +
                     'periculo atque etiam suspicione belli?',
-                    salary: 75000
+                    salary: 75000,
+                    company: 'Air France'
                 },
                 {
                     title: 'Dompteur d\'ours',
@@ -25,7 +26,8 @@ app.factory('Offers', ['$q', '$timeout', function($q, $timeout){
                     'provinciis decernendis perpetuae pacis habere oportere rationem. ' +
                     'Nam quis hoc non sentit omnia alia esse nobis vacua ab omni ' +
                     'periculo atque etiam suspicione belli?',
-                    salary: 35000
+                    salary: 35000,
+                    company: 'HSBC'
                 },
                 {
                     title: 'Gérant',
@@ -33,7 +35,8 @@ app.factory('Offers', ['$q', '$timeout', function($q, $timeout){
                     'provinciis decernendis perpetuae pacis habere oportere rationem. ' +
                     'Nam quis hoc non sentit omnia alia esse nobis vacua ab omni ' +
                     'periculo atque etiam suspicione belli?',
-                    salary: 25000
+                    salary: 25000,
+                    company: 'Camping municipal'
                 }
             ];
             offerCollection = offers;
