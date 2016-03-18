@@ -12,14 +12,14 @@ app.factory('Authentification', ['$q', '$timeout', function($q, $timeout){
     var isLoggedIn = function(){
         return (_user) ? true : false;
     };
-    var loggingIn = function(username){
+    var loggingIn = function(credentials){
         var deferred = $q.defer();
         // TODO: implement logging-in
         $timeout(function(){
             _user = {
                 userID: 1,
                 imgSrc: 'test.jpg',
-                nickname: username,
+                nickname: credentials.username,
                 lastName: 'McDeath',
                 firstName: 'Hjördis',
                 gender: 'femme',

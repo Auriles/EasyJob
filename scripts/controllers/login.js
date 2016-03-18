@@ -4,10 +4,17 @@ app.controller('loginCtrl', ['$scope', '$log', 'Authentification', '$state', 'ng
     var userLogin = function(){
         console.log($scope.credentials);
         if($scope.credentials && $scope.credentials.username && $scope.credentials.password) {
+            var credential = {
+                username: $scope.credentials.username,
+                password: CryptoJS.SHA3($scope.credentials.password).toString()
+            };
+        console.log(credential);
+
             // TODO: implement loggin
             $log.debug('Login process started.');
-            Authentification.loggingIn($scope.username, $scope.password)
+            Authentification.loggingIn(credential)
                 .then(function(data){
+                    console.log(CryptoJS.SHA3($scope.password).toString());
                     ngDialog.close();
                     $state.go('particular.profile', data.userID);
                 })
